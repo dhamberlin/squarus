@@ -1,35 +1,32 @@
 const path = require('path');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './src/index.jsx',
   output: {
     path: path.resolve('dist'),
     filename: 'bundle.js'
   },
+  resolve: {
+    extensions: ['.js', '.jsx']
+  },
   module: {
-    rules: [{
-      test: /\.scss$/,
-      use: [{
-        loader: "style-loader" // Creates Style Nodes from JS Strings
-      }, {
-        loader: "css-loader" // Translates CSS into CommonJS
-      }, {
-        loader: "sass-loader" // Compiles SCSS to CSS
-      }]
-    }],
     loaders: [
       {
         test: /\.jsx?$/,
-        loader: 'babel',
+        loader: 'babel-loader',
         exclude: /node_modules/,
         query: {
-            presets: ['es2015', 'react']
+          presets: ['es2015', 'react']
         }
       },
       {
         test: /\.s?css$/,
-        loaders: ['style', 'css', 'sass']
-      }
+        loaders: ['style-loader', 'css-loader', 'sass-loader']
+      },
+      {
+        test: /\.(eot|svg|ttf|woff|woff2)$/,
+        loader: 'file-loader'
+      },
     ]
   }
-}
+};
