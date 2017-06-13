@@ -1,0 +1,4 @@
+# Ignore Node Modules, Webpack Bundles, and DS_Store
+node_modules/
+dist/
+.DS_Store
