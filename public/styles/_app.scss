@@ -1,4 +1,38 @@
 // SCSS for App.jsx
 
+// Import Fonts
+@font-face {
+    font-family: 'Cubicle';
+    src: url('../assets/fonts/cubicle.ttf') url('../assets/fonts/cubicle.woff') url('../assets/fonts/cubicle.woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
 // Import Variables
 @import '_variables.scss';
+#app {
+  background: #E2E2E2;
+  width: 100vw;
+  height: 100vh;
+}
+.app-header {
+  font-family: 'Cubicle';
+  font-size: 128px;
+  color: yellow;
+  width: $fullWidth;
+  display: flex;
+  justify-content: center;
+  transform: rotate(45deg);
+  height: 100vh;
+  align-items: center;
+  
+}
+.sq {
+  color: red;
+}
+.ua {
+  color: blue;
+}
+.ru {
+  color: green;
+}
