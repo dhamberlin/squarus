@@ -3,5 +3,25 @@
 // Import Partial SCSS Files
 @import '_app.scss';
 @import '_board.scss';
+@import '_tile.scss';
 @import '_piece.scss';
 @import '_pieces.scss';
+
+body {
+  -ms-box-orient: horizontal;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-align-items: center;
+  align-items: center;
+
+  height: 100%
+}

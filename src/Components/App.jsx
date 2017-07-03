@@ -1,19 +1,32 @@
 import React, { Component } from 'react';
-import '../../public/styles/_app.scss';
+import { connect } from 'react-redux';
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      board: [],
-      turn: 'R',
-    };
-  }
-  render() {
-    return (
-      <h1 className="app-header"><span className="sq">SQ</span><span className="ua">UA</span><span className="ru">RU</span>S</h1>
-    );
-  }
+import Header from './Header.jsx';
+import Tile from './Tile.jsx';
+
+const mapStateToProps = ({ board }) => ({
+  board
+});
+
+const App = ({ board }) => {
+  let k = 0;
+  return (
+    <div className="board">
+      {board.map((row, r) => (
+        <div className="row" key={'row' + r}>
+          {row.map((tile, c) => (
+            <Tile
+              key={`tile ${k++}`}
+              tile={tile}
+              idx={{ r, c }}
+            />
+          ))}
+        </div>
+      ))}
+    </div>
+  );
 }
 
-export default App;
+export default connect(mapStateToProps)(App);
+
+//

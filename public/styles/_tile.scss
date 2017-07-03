@@ -1,0 +1,75 @@
+// SCSS for Tile.jsx
+
+// Import Variables
+@import '_variables.scss';
+
+.board {
+  width: 80vmin;
+  height: 80vmin;
+  background-color: grey;
+  // justify-content: center;
+
+  -ms-box-orient: vertical;;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+  -webkit-flex-flow: column wrap;
+  flex-flow: column wrap;
+  -webkit-align-items: stretch;
+  align-items: stretch;
+}
+
+.row {
+    -ms-box-orient: horizontal;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-align-items: stretch;
+    align-items: stretch;
+
+    display: flex;
+    flex: 1;
+}
+
+.tile{
+  display: flex;
+  flex: 1;
+  height: 100%;
+  border-color: white;
+  border-width: 1px;
+  border-style: solid;
+}
+
+.red {
+  background-color: red;
+  flex: 1;
+}
+
+.blue {
+  background-color: blue;
+  flex: 1;
+}
+
+.green {
+  background-color: green;
+  flex: 1;
+}
+
+.yellow {
+  background-color: yellow;
+  flex: 1;
+}
