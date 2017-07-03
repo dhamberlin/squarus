@@ -15,8 +15,8 @@ const Tile = ({ tile, idx, handleClick, currentPlayer }) => (
   <div
     className={`tile ${tile.color}`}
     onClick={() => {
-      console.log(handleClick)
-      handleClick(idx, playerColors[currentPlayer]); }}
+      handleClick(idx, playerColors[currentPlayer]);
+    }}
   />
 );
 
