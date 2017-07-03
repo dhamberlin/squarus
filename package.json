@@ -2,13 +2,13 @@
   "name": "squarus",
   "version": "0.0.1",
   "description": "Block Game Project",
-  "main": "server/server.js",
+  "main": "server/index.js",
   "repository": "https://github.com/software-fungineers/squarus",
   "author": "The Software Fungineers",
   "license": "MIT",
   "scripts": {
     "build": "webpack --config webpack.config.js",
-    "start": "nodemon src/server/server.js",
+    "start": "nodemon src/server/index.js",
     "test": "jest"
   },
   "devDependencies": {
@@ -34,6 +34,8 @@
     "webpack": "^2.6.1"
   },
   "dependencies": {
+    "express": "^4.15.3",
+    "morgan": "^1.8.2",
     "path": "^0.12.7",
     "prop-types": "^15.5.10",
     "react": "^15.5.4",
